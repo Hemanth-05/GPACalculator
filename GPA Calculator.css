@@ -1,5 +1,6 @@
 body{
     margin:18px;
+    background-color:;
 }
 
 #main{
@@ -12,7 +13,7 @@ body{
     color:black;
     padding: 20px;
     font-family: Tahoma;
-    box-shadow: 10px 5px 5px grey;
+    box-shadow: 1px 10px 40px black;
 }
 
 h1{

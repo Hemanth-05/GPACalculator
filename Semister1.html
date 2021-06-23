@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Semister-1 </title>
         <link rel="stylesheet" href="GPA Calculator.css">
+        <script type="text/javascript" src="GPA Calculator.js">
+
+        </script>
         <script type="text/javascript">
             function calculate (){
                 var a = Number(document.getElementById("m1").value);
@@ -17,7 +20,24 @@
                 var h = Number(document.getElementById("beel").value);
                 var i = ((a+b)*4 + c*3 + d*2.5 + e*2 + f*1.5 + (g+h)*1)/19;
                 var j = i.toFixed(2);
-                document.getElementById("result").value = j;
+                x = document.getElementsByClassName("gpa")
+                total=8;
+                count=0;
+                for(i=0;i<total-1;i++)
+                {
+                  if(x[i].value=="")
+                  {
+                  count++;
+                  }
+                }
+                if(count==0)
+                {
+                  document.getElementById("result").value = j;
+                }
+                else{
+                alert("You cannot leave any box empty.");
+              }
+
             }
 
             function reset(){
@@ -35,41 +55,52 @@
     </head>
     <body>
       <a href = "index.html"> <img src = "Home.jpg" height="40px"> </a>
-        <div id = "main" align = "center">
+        <div class = "container" id = "main" align = "center">
+
+
+          <script type="text/javascript">
+            z=document.getElementsByClassName("container");
+            document.body.style.background = localStorage.getItem('backgroundcolor');
+              z[0].style.backgroundColor =localStorage.getItem('divbackground');
+              z[0].style.color =localStorage.getItem('divcolor');
+
+          </script>
+
+
             <h1 align="center"> Semister - 1 </h1><br>
 
                 <table cellpadding="8px" align="center">
                     <tr>
                         <td> Mathematics - I </td>
-                        <td> <input type = "text" id="m1" maxlength="2" /> </td>
+                        <td> <input type = "text" id="m1" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Chemistry </td>
-                        <td> <input type="text" id="chem" maxlength="2" /> </td>
+                        <td> <input type="text" id="chem" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Basic Electrical Engineering </td>
-                        <td> <input type="text" id="bee" maxlength="2" /> </td>
+                        <td> <input type="text" id="bee" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Engineering Workshop</td>
-                        <td> <input type="text" id="egw" maxlength="2" /> </td>
+                        <td> <input type="text" id="egw" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> English </td>
-                        <td> <input type="text"id="eng"maxlength="2" /> </td>
+                        <td> <input type="text"id="eng"maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Engineering Chemistry Lab </td>
-                        <td> <input type="ecl" id="ecl" maxlength="2" /> </td>
+                        <td> <input type="ecl" id="ecl" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> ELCS Lab </td>
-                        <td> <input type="text" id="elcsl" maxlength="2" /> </td>
+                        <td> <input type="text" id="elcsl" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> BEE Lab </td>
-                        <td> <input type="text" id="beel" maxlength="2" /> </td>
+                        <td> <input type="text" id="beel" maxlength="2" class="gpa"/> </td>
                     </tr>
                 </table>
                 <div id = "button"></div>

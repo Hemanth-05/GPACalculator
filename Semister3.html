@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Semister - 3 </title>
         <link rel="stylesheet" href="GPA Calculator.css">
-        <script type="text/javascript">
+        <script src = "GPA Calculator.js" type="text/javascript">
             function calculate (){
                 var a = Number(document.getElementById("ade").value);
                 var b = Number(document.getElementById("ds").value);
@@ -19,7 +19,23 @@
                 var j = Number(document.getElementById("gsl").value);
                 var k = ((a+d)*3 + e*2 + (b+c)*4 + (f+i)*1 + (g+h)*1.5 + j*0)/21;
                 var l = k.toFixed(2);
-                document.getElementById("result").value = l;
+                x = document.getElementsByClassName("gpa")
+                total=10;
+                count=0;
+                for(i=0;i<total-1;i++)
+                {
+                  if(x[i].value=="")
+                  {
+                  count++;
+                  }
+                }
+                if(count==0)
+                {
+                  document.getElementById("result").value = j;
+                }
+                else{
+                alert("You cannot leave any box empty.");
+              }
             }
 
             function reset(){
@@ -39,49 +55,64 @@
     </head>
     <body>
       <a href = "index.html"> <img src = "Home.jpg" height="40px"> </a>
-        <div id = "main" align = "center">
+        <div id = "main" align = "center" class = "container">
+
+
+
+          <script type="text/javascript">
+            z=document.getElementsByClassName("container");
+            document.body.style.background = localStorage.getItem('backgroundcolor');
+              z[0].style.backgroundColor =localStorage.getItem('divbackground');
+              z[0].style.color =localStorage.getItem('divcolor');
+
+          </script>
+
+
+
+
+
             <h1 align="center"> Semister - 3 </h1><br>
 
                 <table cellpadding="8px" align="center">
                     <tr>
                         <td> Analog and Digital Electronics </td>
-                        <td> <input type = "text" id="ade" maxlength="2" /> </td>
+                        <td> <input type = "text" id="ade" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Data Structures </td>
-                        <td> <input type="text" id="ds" maxlength="2" /> </td>
+                        <td> <input type="text" id="ds" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Computer Oriented Statistical Methods </td>
-                        <td> <input type="text" id="cosm" maxlength="2" /> </td>
+                        <td> <input type="text" id="cosm" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Computer Organisation and Architecture </td>
-                        <td> <input type="text"id="coa"maxlength="2" /> </td>
+                        <td> <input type="text"id="coa"maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Object Oriented Programming using C++ </td>
-                        <td> <input type="text" id="cpp" maxlength="2" /> </td>
+                        <td> <input type="text" id="cpp" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> ADE Lab </td>
-                        <td> <input type="text" id="adel" maxlength="2" /> </td>
+                        <td> <input type="text" id="adel" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> DS Lab </td>
-                        <td> <input type="text" id="dsl" maxlength="2" /> </td>
+                        <td> <input type="text" id="dsl" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> IT Workshop Lab</td>
-                        <td> <input type="text" id="itws" maxlength="2" /> </td>
+                        <td> <input type="text" id="itws" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> C++ Lab </td>
-                        <td> <input type="text" id="cppl" maxlength="2" /> </td>
+                        <td> <input type="text" id="cppl" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Gender Sensitization Lab </td>
-                        <td> <input type="text" id="gsl" maxlength="2" /> </td>
+                        <td> <input type="text" id="gsl" maxlength="2" class="gpa"/> </td>
                     </tr>
                 </table>
                 <div id = "button"></div>

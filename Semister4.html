@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Semister - 4 </title>
         <link rel="stylesheet" href="GPA Calculator.css">
-        <script type="text/javascript">
+        <script src = "GPA Calculator.js" type="text/javascript">
             function calculate (){
                 var a = Number(document.getElementById("dm").value);
                 var b = Number(document.getElementById("befa").value);
@@ -18,7 +18,23 @@
                 var i = Number(document.getElementById("coi").value);
                 var j = ((a+b+c)*3 + (d+e)*4 + (f+g)*1.5 + h*1 + i*0)/21 ;
                 var k = j.toFixed(2);
-                document.getElementById("result").value = k;
+                x = document.getElementsByClassName("gpa")
+                total=9;
+                count=0;
+                for(i=0;i<total-1;i++)
+                {
+                  if(x[i].value=="")
+                  {
+                  count++;
+                  }
+                }
+                if(count==0)
+                {
+                  document.getElementById("result").value = j;
+                }
+                else{
+                alert("You cannot leave any box empty.");
+              }
             }
 
             function reset(){
@@ -37,45 +53,57 @@
     </head>
     <body>
       <a href = "index.html"> <img src = "Home.jpg" height="40px"> </a>
-        <div id = "main" align = "center">
+        <div id = "main" align = "center" class = "container">
+
+
+          <script type="text/javascript">
+            z=document.getElementsByClassName("container");
+            document.body.style.background = localStorage.getItem('backgroundcolor');
+              z[0].style.backgroundColor =localStorage.getItem('divbackground');
+              z[0].style.color =localStorage.getItem('divcolor');
+
+          </script>
+
+
+
             <h1 align="center"> Semister - 4 </h1><br>
 
                 <table cellpadding="8px" align="center">
                     <tr>
                         <td> Discrete Mathematics </td>
-                        <td> <input type = "text" id="dm" maxlength="2" /> </td>
+                        <td> <input type = "text" id="dm" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Business Economics & Financial Analysis </td>
-                        <td> <input type="text" id="befa" maxlength="2" /> </td>
+                        <td> <input type="text" id="befa" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Operating System </td>
-                        <td> <input type="text" id="os" maxlength="2" /> </td>
+                        <td> <input type="text" id="os" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Database Management System </td>
-                        <td> <input type="text"id="dbms"maxlength="2" /> </td>
+                        <td> <input type="text"id="dbms"maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Java Programming </td>
-                        <td> <input type="text" id="java" maxlength="2" /> </td>
+                        <td> <input type="text" id="java" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> OS Lab </td>
-                        <td> <input type="text" id="osl" maxlength="2" /> </td>
+                        <td> <input type="text" id="osl" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> DBMS Lab </td>
-                        <td> <input type="text" id="dbmsl" maxlength="2" /> </td>
+                        <td> <input type="text" id="dbmsl" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Java Programming Lab</td>
-                        <td> <input type="text" id="javal" maxlength="2" /> </td>
+                        <td> <input type="text" id="javal" maxlength="2" class="gpa"/> </td>
                     </tr>
                     <tr>
                         <td> Constitution of India </td>
-                        <td> <input type="text" id="coi" maxlength="2" /> </td>
+                        <td> <input type="text" id="coi" maxlength="2" class="gpa"/> </td>
                     </tr>
                 </table>
                 <div id = "button"></div>
