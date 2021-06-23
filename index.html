@@ -49,10 +49,6 @@
 
     </style>
     <script src = "GPA Calculator.js" type="text/javascript">
-      function notDeclared(a)
-      {
-        alert("Semister " + a + " results have not yet declared.");
-      }
     </script>
   </head>
   <body>
@@ -73,6 +69,10 @@
 
 
 <script type="text/javascript">
+function notDeclared(a)
+{
+  alert("Semister " + a + " results have not yet declared.");
+}
   z=document.getElementsByClassName("container");
   document.body.style.background = localStorage.getItem('backgroundcolor');
     z[0].style.backgroundColor =localStorage.getItem('divbackground');
