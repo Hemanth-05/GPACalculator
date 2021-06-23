@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Semister-1 </title>
+        <link rel="stylesheet" href="GPA Calculator.css">
+        <script type="text/javascript">
+            function calculate (){
+                var a = Number(document.getElementById("m1").value);
+                var b = Number(document.getElementById("chem").value);
+                var c = Number(document.getElementById("bee").value);
+                var d = Number(document.getElementById("egw").value);
+                var e = Number(document.getElementById("eng").value);
+                var f = Number(document.getElementById("ecl").value);
+                var g = Number(document.getElementById("elcsl").value);
+                var h = Number(document.getElementById("beel").value);
+                var i = ((a+b)*4 + c*3 + d*2.5 + e*2 + f*1.5 + (g+h)*1)/19;
+                var j = i.toFixed(2);
+                document.getElementById("result").value = j;
+            }
+
+            function reset(){
+                document.getElementById("m1").value = "";
+                document.getElementById("chem").value = "";
+                document.getElementById("bee").value = "";
+                document.getElementById("egw").value = "";
+                document.getElementById("eng").value = "";
+                document.getElementById("ecl").value = "";
+                document.getElementById("elcsl").value = "";
+                document.getElementById("beel").value = "";
+                document.getElementById("result").value = "";
+            }
+        </script>
+    </head>
+    <body>
+      <a href = "index.html"> <img src = "Home.jpg" height="40px"> </a>
+        <div id = "main" align = "center">
+            <h1 align="center"> Semister - 1 </h1><br>
+
+                <table cellpadding="8px" align="center">
+                    <tr>
+                        <td> Mathematics - I </td>
+                        <td> <input type = "text" id="m1" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Chemistry </td>
+                        <td> <input type="text" id="chem" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Basic Electrical Engineering </td>
+                        <td> <input type="text" id="bee" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Engineering Workshop</td>
+                        <td> <input type="text" id="egw" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> English </td>
+                        <td> <input type="text"id="eng"maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Engineering Chemistry Lab </td>
+                        <td> <input type="ecl" id="ecl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> ELCS Lab </td>
+                        <td> <input type="text" id="elcsl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> BEE Lab </td>
+                        <td> <input type="text" id="beel" maxlength="2" /> </td>
+                    </tr>
+                </table>
+                <div id = "button"></div>
+                    <br/><button id = "btn" onclick="calculate()" align = "center"> CALCULATE </button>
+                    <button id = "btn" onclick="reset()"> RESET </button>
+                    <br/> <br/><input type="text" id="result" maxlength="2" placeholder="Result" />
+                </div>
+            </div>
+    </body>
+</html>

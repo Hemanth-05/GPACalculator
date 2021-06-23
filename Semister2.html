@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Semister-2 </title>
+        <link rel="stylesheet" href="GPA Calculator.css">
+        <script type="text/javascript">
+            function calculate (){
+                var a = Number(document.getElementById("m2").value);
+                var b = Number(document.getElementById("ap").value);
+                var c = Number(document.getElementById("pps").value);
+                var d = Number(document.getElementById("eg").value);
+                var e = Number(document.getElementById("apl").value);
+                var f = Number(document.getElementById("ppsl").value);
+                var g = Number(document.getElementById("es").value);
+                var h = ((a+b+c)*4 + d*3 + (e+f)*1.5 + g*0)/18;
+                var i = h.toFixed(2);
+                document.getElementById("result").value = i;
+            }
+
+            function reset(){
+                document.getElementById("m2").value = "";
+                document.getElementById("ap").value = "";
+                document.getElementById("pps").value = "";
+                document.getElementById("eg").value = "";
+                document.getElementById("apl").value = "";
+                document.getElementById("ppsl").value = "";
+                document.getElementById("es").value = "";
+                document.getElementById("result").value = "";
+            }
+        </script>
+    </head>
+    <body>
+      <a href = "index.html"> <img src = "Home.jpg" height="40px"> </a>
+        <div id = "main" align = "center">
+            <h1 align="center"> Semister - 2 </h1><br>
+
+                <table cellpadding="8px" align="center">
+                    <tr>
+                        <td> Mathematics - II </td>
+                        <td> <input type = "text" id="m2" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Applied Physics </td>
+                        <td> <input type="text" id="ap" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Programming for problem solving </td>
+                        <td> <input type="text" id="pps" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Engineering Graphics </td>
+                        <td> <input type="text "id="eg" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> AP Lab </td>
+                        <td> <input type="text" id="apl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> PPS Lab </td>
+                        <td> <input type="text" id="ppsl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Environmental Science </td>
+                        <td> <input type="text" id="es" maxlength="2" /> </td>
+                    </tr>
+                </table>
+                <div id = "button"></div>
+                    <br/><button id = "btn" onclick="calculate()" align = "center"> CALCULATE </button>
+                    <button id = "btn" onclick="reset()"> RESET </button>
+                    <br/> <br/><input type="text" id="result" maxlength="2" placeholder="Result" />
+                </div>
+            </div>
+    </body>
+</html>

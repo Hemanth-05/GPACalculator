@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Semister - 3 </title>
+        <link rel="stylesheet" href="GPA Calculator.css">
+        <script type="text/javascript">
+            function calculate (){
+                var a = Number(document.getElementById("ade").value);
+                var b = Number(document.getElementById("ds").value);
+                var c = Number(document.getElementById("cosm").value);
+                var d = Number(document.getElementById("coa").value);
+                var e = Number(document.getElementById("cpp").value);
+                var f = Number(document.getElementById("adel").value);
+                var g = Number(document.getElementById("dsl").value);
+                var h = Number(document.getElementById("itws").value);
+                var i = Number(document.getElementById("cppl").value);
+                var j = Number(document.getElementById("gsl").value);
+                var k = ((a+d)*3 + e*2 + (b+c)*4 + (f+i)*1 + (g+h)*1.5 + j*0)/21;
+                var l = k.toFixed(2);
+                document.getElementById("result").value = l;
+            }
+
+            function reset(){
+                document.getElementById("ade").value = "";
+                document.getElementById("ds").value = "";
+                document.getElementById("cosm").value = "";
+                document.getElementById("coa").value = "";
+                document.getElementById("cpp").value = "";
+                document.getElementById("adel").value = "";
+                document.getElementById("dsl").value = "";
+                document.getElementById("itws").value = "";
+                document.getElementById("cppl").value = "";
+                document.getElementById("gsl").value = "";
+                document.getElementById("result").value = "";
+            }
+        </script>
+    </head>
+    <body>
+      <a href = "index.html"> <img src = "Home.jpg" height="40px"> </a>
+        <div id = "main" align = "center">
+            <h1 align="center"> Semister - 3 </h1><br>
+
+                <table cellpadding="8px" align="center">
+                    <tr>
+                        <td> Analog and Digital Electronics </td>
+                        <td> <input type = "text" id="ade" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Data Structures </td>
+                        <td> <input type="text" id="ds" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Computer Oriented Statistical Methods </td>
+                        <td> <input type="text" id="cosm" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Computer Organisation and Architecture </td>
+                        <td> <input type="text"id="coa"maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Object Oriented Programming using C++ </td>
+                        <td> <input type="text" id="cpp" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> ADE Lab </td>
+                        <td> <input type="text" id="adel" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> DS Lab </td>
+                        <td> <input type="text" id="dsl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> IT Workshop Lab</td>
+                        <td> <input type="text" id="itws" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> C++ Lab </td>
+                        <td> <input type="text" id="cppl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Gender Sensitization Lab </td>
+                        <td> <input type="text" id="gsl" maxlength="2" /> </td>
+                    </tr>
+                </table>
+                <div id = "button"></div>
+                    <br/><button id = "btn" onclick="calculate()" align = "center"> CALCULATE </button>
+                    <button id = "btn" onclick="reset()"> RESET </button>
+                    <br/> <br/><input type="text" id="result" maxlength="2" placeholder="Result" />
+                </div>
+            </div>
+    </body>
+</html>

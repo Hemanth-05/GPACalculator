@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>GPA Calculator</title>
+    <style>
+
+      .row div{
+        text-align: center;
+        padding: 25px;
+      }
+
+      .container{
+        background: #cedbda;
+        margin-top:150px;
+        margin-bottom:150px;
+        border-radius: 20px;
+        box-shadow: 8px 8px 5px grey;
+      }
+
+      .row div a{
+        border-radius:10px;
+      }
+
+      #dis a{
+        opacity:0.7;
+        cursor:not-allowed;
+      }
+
+    </style>
+    <script type="text/javascript">
+      function notDeclared(a)
+      {
+        alert("Semister " + a + " results have not yet declared.");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <div class="container">
+      <h4 class="display-4" align="center"> GPA CALCULATOR </h4>
+      <div class="row ">
+        <div class="col-sm-6">
+          <a href = "Semister1.html "class="btn btn-success btn-lg"> SEMISTER - 1</a>
+        </div>
+        <div class="col-sm-6">
+          <a href = "Semister2.html" class="btn btn-success btn-lg"> SEMISTER - 2</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <a href = "Semister3.html" class="btn btn-success btn-lg"> SEMISTER - 3</a>
+        </div>
+        <div class="col-sm-6">
+          <a href = "Semister4.html" class="btn btn-success btn-lg"> SEMISTER - 4</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <a href = "Semister5.html" class="btn btn-success btn-lg"> SEMISTER - 5</a>
+        </div>
+        <div class="col-sm-6" id = "dis">
+          <a href = "#" class="btn btn-success btn-lg" onclick = "notDeclared(6)" disabled> SEMISTER - 6</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6" id = "dis">
+          <a href = "#" class="btn btn-success btn-lg" onclick = "notDeclared(7)" disabled> SEMISTER - 7</a>
+        </div>
+        <div class="col-sm-6" id = "dis">
+          <a href = "#" class="btn btn-success btn-lg" onclick = "notDeclared(8)" disabled> SEMISTER - 8</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

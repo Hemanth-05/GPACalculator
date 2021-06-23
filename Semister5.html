@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Semister - 5 </title>
+        <link rel="stylesheet" href="GPA Calculator.css">
+        <script type="text/javascript">
+            function calculate (){
+                var a = Number(document.getElementById("flat").value);
+                var b = Number(document.getElementById("se").value);
+                var c = Number(document.getElementById("cn").value);
+                var d = Number(document.getElementById("wt").value);
+                var e = Number(document.getElementById("ppl").value);
+                var f = Number(document.getElementById("dd").value);
+                var g = Number(document.getElementById("sel").value);
+                var h = Number(document.getElementById("cnwtl").value);
+                var i = Number(document.getElementById("acsl").value);
+                var j = Number(document.getElementById("ipr").value);
+                var k = ((a+b+c+d+e+f)*3 + (g+h)*1.5 + i*1 + j*0)/22 ;
+                var l = k.toFixed(2);
+                document.getElementById("result").value = l;
+            }
+
+            function reset(){
+                document.getElementById("flat").value = "";
+                document.getElementById("se").value = "";
+                document.getElementById("cn").value = "";
+                document.getElementById("wt").value = "";
+                document.getElementById("ppl").value = "";
+                document.getElementById("dd").value = "";
+                document.getElementById("sel").value = "";
+                document.getElementById("cnwtl").value = "";
+                document.getElementById("acsl").value = "";
+                document.getElementById("ipr").value = "";
+                document.getElementById("result").value = "";
+            }
+        </script>
+    </head>
+    <body>
+      <a href = "index.html"> <img src = "Home.jpg" height="40px"> </a>
+        <div id = "main" align = "center">
+            <h1 align="center"> Semister - 5 </h1><br>
+
+                <table cellpadding="8px" align="center">
+                    <tr>
+                        <td> Formal Language and Automata Theory </td>
+                        <td> <input type = "text" id="flat" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Software Engineering </td>
+                        <td> <input type="text" id="se" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Computer Networks </td>
+                        <td> <input type="text" id="cn" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Web Technology </td>
+                        <td> <input type="text"id="wt"maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Principles of Programming Language </td>
+                        <td> <input type="text" id="ppl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Distributed Database </td>
+                        <td> <input type="text" id="dd" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> SE Lab </td>
+                        <td> <input type="text" id="sel" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> CN and WT Lab</td>
+                        <td> <input type="text" id="cnwtl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> ACS Lab </td>
+                        <td> <input type="text" id="acsl" maxlength="2" /> </td>
+                    </tr>
+                    <tr>
+                        <td> Intellectual Property Rights </td>
+                        <td> <input type="text" id="ipr" maxlength="2" /> </td>
+                    </tr>
+                </table>
+                <div id = "button"></div>
+                    <br/><button id = "btn" onclick="calculate()" align = "center"> CALCULATE </button>
+                    <button id = "btn" onclick = "reset()"> RESET</button>
+                    <br/> <br/><input type="text" id="result" maxlength="2" placeholder="Result" />
+                </div>
+            </div>
+    </body>
+</html>
