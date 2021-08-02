@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -22,9 +22,10 @@
                 x = document.getElementsByClassName("gpa")
                 total=7;
                 count=0;
-                for(i=0;i<total;i++)
+                var loop = 0;
+                for(loop=0;loop<total;loop++)  //its better to use some word for for loop variable because it can overlap the upper variables if we use the variable i.
                 {
-                  if(x[i].value=="")
+                  if(x[loop].value=="")
                   {
                   count++;
                   }
@@ -105,8 +106,4 @@
                 </div>
             </div>
     </body>
-</html> -->
-
-
-<h4> This page is currently Unavaliable.We are working on it.</h4>
-<p> Sorry for the inconvience</p>
+</html>
