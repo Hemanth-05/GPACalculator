@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Semister-8 </title>
+        <link rel="stylesheet" href="GPA Calculator.css">
+        <script type="text/javascript" src = "GPA Calculator.js">
+
+        </script>
+        <script type="text/javascript">
+            function calculate (){
+                var a = Number(document.getElementById("pr2").value);
+                var b = Number(document.getElementById("hci").value);
+                var c = Number(document.getElementById("ob").value);
+                var d = Number(document.getElementById("eia").value);
+                var e = ((a*7)+(b+c+d)*3)/16;
+                var f = e.toFixed(2);
+                x = document.getElementsByClassName("gpa")
+                total=4;
+                count=0;
+                var loop = 0;
+                for(loop=0;loop<total;loop++)  //its better to use some word for for loop variable because it can overlap the upper variables if we use the variable i.
+                {
+                  if(x[loop].value=="")
+                  {
+                  count++;
+                  }
+                }
+                if(count==0)
+                {
+                  document.getElementById("result").value = f;
+                }
+                else{
+                alert("You cannot leave any box empty.");
+              }
+            }
+
+            function reset(){
+                document.getElementById("pr2").value = "";
+                document.getElementById("hci").value = "";
+                document.getElementById("ob").value = "";
+                document.getElementById("eia").value = "";
+                document.getElementById("result").value = "";
+            }
+        </script>
+    </head>
+    <body>
+      <a href = "index.html"> <img src = "Home.jpg" height="40px"> </a>
+        <div id = "main" align = "center" class = "container">
+
+
+          <script type="text/javascript">
+            z=document.getElementsByClassName("container");
+            document.body.style.background = localStorage.getItem('backgroundcolor');
+              z[0].style.backgroundColor =localStorage.getItem('divbackground');
+              z[0].style.color =localStorage.getItem('divcolor');
+
+          </script>
+
+
+
+
+            <h1 align="center"> Semister - 8 </h1><br>
+
+                <table cellpadding="8px" align="center">
+                    <tr>
+                        <td> Project Stage-II </td>
+                        <td> <input type = "text" id="pr2" maxlength="2" class="gpa"/> </td>
+                    </tr>
+                    <tr>
+                        <td> Human Computer Interaction </td>
+                        <td> <input type="text" id="hci" maxlength="2" class="gpa"/> </td>
+                    </tr>
+                    <tr>
+                        <td> Organizational Behaviour </td>
+                        <td> <input type="text" id="ob" maxlength="2" class="gpa"/> </td>
+                    </tr>
+                    <tr>
+                        <td> Environmental Impact Assessment </td>
+                        <td> <input type="text "id="eia" maxlength="2" class="gpa"/> </td>
+                    </tr>
+                </table>
+                <div id = "button"></div>
+                    <br/><button id = "btn" onclick="calculate()" align = "center"> CALCULATE </button>
+                    <button id = "btn" onclick="reset()"> RESET </button>
+                    <br/> <br/><input type="text" id="result" maxlength="2" placeholder="Result" />
+                </div>
+            </div>
+    </body>
+</html>
